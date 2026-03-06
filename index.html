@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#1a0533">
 <title>✨ Vibe Check Tracker</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #0f0020;
@@ -40,12 +40,14 @@
   * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 
   body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     background: var(--bg);
     color: var(--text);
     min-height: 100dvh;
     overflow-x: hidden;
     padding-bottom: 90px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
   }
 
   /* NOISE TEXTURE */
@@ -94,7 +96,7 @@
     justify-content: space-between;
   }
   .app-title {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 800;
     font-size: 22px;
     background: var(--grad1);
@@ -138,7 +140,7 @@
     border: none;
     background: none;
     color: var(--muted);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 10px;
     font-weight: 500;
     transition: color 0.2s;
@@ -175,7 +177,7 @@
   .card.coral::before { background: var(--grad7); }
 
   .card-title {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 0.5px;
@@ -189,7 +191,7 @@
 
   /* SECTION LABEL */
   .section-label {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 700;
     font-size: 11px;
     letter-spacing: 1.5px;
@@ -215,7 +217,7 @@
     border-radius: var(--radius-sm);
     color: var(--text);
     padding: 11px 14px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 15px;
     outline: none;
     transition: border-color 0.2s;
@@ -257,7 +259,7 @@
   }
   .slider-val {
     text-align: right;
-    font-family: 'Syne', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 700;
     font-size: 22px;
     color: var(--pink);
@@ -291,7 +293,7 @@
     border-radius: var(--radius-sm);
     background: var(--grad1);
     color: #fff;
-    font-family: 'Syne', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 700;
     font-size: 15px;
     letter-spacing: 0.5px;
@@ -312,7 +314,7 @@
     color: #fff;
     padding: 12px 24px;
     border-radius: 30px;
-    font-family: 'Syne', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 700;
     font-size: 14px;
     opacity: 0;
@@ -349,7 +351,7 @@
     margin-bottom: 4px;
   }
   .dash-tile-val {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 800;
     font-size: 20px;
     line-height: 1.1;
@@ -381,14 +383,14 @@
     gap: 14px;
   }
   .streak-num {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 800;
     font-size: 42px;
     line-height: 1;
     color: #fff;
   }
   .streak-text { flex: 1; }
-  .streak-text strong { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px; display: block; }
+  .streak-text strong { font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 15px; display: block; }
   .streak-text span { font-size: 12px; opacity: 0.85; }
 
   /* CALENDAR */
@@ -409,7 +411,7 @@
     color: var(--text);
   }
   .cal-month {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 700;
     font-size: 17px;
   }
@@ -476,7 +478,7 @@
     text-align: center;
   }
   .astro-sign { font-size: 52px; margin-bottom: 6px; }
-  .astro-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 20px; color: #fff; margin-bottom: 4px; }
+  .astro-title { font-family: 'Quicksand', sans-serif; font-weight: 800; font-size: 20px; color: #fff; margin-bottom: 4px; }
   .astro-sub { font-size: 13px; opacity: 0.85; color: #fff; }
 
   .moon-phase-row {
@@ -542,7 +544,7 @@
     border: 1.5px solid var(--border);
     background: var(--surface);
     color: var(--muted);
-    font-family: 'Syne', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 12px;
     font-weight: 700;
     cursor: pointer;
@@ -570,6 +572,44 @@
     font-weight: 600;
     margin-bottom: 10px;
   }
+
+  /* BACKUP REMINDER BANNER */
+  .backup-banner {
+    display: none;
+    margin: 0 0 14px 0;
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    align-items: center;
+    gap: 12px;
+    border: 1.5px solid;
+    animation: fadeIn 0.3s ease;
+  }
+  .backup-banner.warn {
+    background: rgba(255, 210, 63, 0.08);
+    border-color: rgba(255, 210, 63, 0.35);
+  }
+  .backup-banner.danger {
+    background: rgba(248, 113, 113, 0.08);
+    border-color: rgba(248, 113, 113, 0.35);
+  }
+  .backup-banner.show { display: flex; }
+  .backup-banner-icon { font-size: 26px; flex-shrink: 0; }
+  .backup-banner-text { flex: 1; }
+  .backup-banner-text strong { display: block; font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+  .backup-banner-text span { font-size: 11px; color: var(--muted); }
+  .backup-banner-btn {
+    flex-shrink: 0;
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .backup-banner.warn .backup-banner-btn { background: var(--grad2); color: #1a0035; }
+  .backup-banner.danger .backup-banner-btn { background: var(--red); color: #fff; }
 
   /* SCROLLBAR */
   ::-webkit-scrollbar { width: 0; height: 0; }
@@ -680,6 +720,16 @@
       <strong>Day Streak 🔥</strong>
       <span>Keep logging daily!</span>
     </div>
+  </div>
+
+  <!-- BACKUP REMINDER BANNER -->
+  <div class="backup-banner" id="backupBanner">
+    <div class="backup-banner-icon" id="backupBannerIcon">💾</div>
+    <div class="backup-banner-text">
+      <strong id="backupBannerTitle">Time to back up!</strong>
+      <span id="backupBannerSub">Your last backup was a while ago.</span>
+    </div>
+    <button class="backup-banner-btn" onclick="quickBackupFromBanner()">Back up now</button>
   </div>
 
   <div class="dash-grid">
@@ -1450,6 +1500,7 @@ function refreshDashboard() {
   const container = document.getElementById('recentLog');
   if (recent.length === 0) {
     container.innerHTML = '<div class="empty"><div class="empty-icon">📋</div>No entries yet — start logging!</div>';
+    checkBackupReminder();
     return;
   }
   container.innerHTML = recent.map(([k, e]) => {
@@ -1469,6 +1520,8 @@ function refreshDashboard() {
       <div class="log-time">${e.mood.overall ? e.mood.overall.split(' ')[0] : ''}</div>
     </div>`;
   }).join('');
+
+  checkBackupReminder();
 }
 
 // ========== CALENDAR ==========
@@ -2276,6 +2329,86 @@ function mapMood(val) {
   return '';
 }
 
+// ===================== BACKUP REMINDER =====================
+const BACKUP_KEY = 'vibecheck_last_backup';
+const WARN_DAYS = 7;   // yellow warning
+const DANGER_DAYS = 14; // red urgent
+
+function getLastBackupDate() {
+  const ts = localStorage.getItem(BACKUP_KEY);
+  return ts ? new Date(parseInt(ts)) : null;
+}
+
+function recordBackup() {
+  localStorage.setItem(BACKUP_KEY, Date.now().toString());
+}
+
+function daysSinceBackup() {
+  const last = getLastBackupDate();
+  if (!last) return null;
+  return Math.floor((Date.now() - last.getTime()) / (1000 * 60 * 60 * 24));
+}
+
+function checkBackupReminder() {
+  const data = loadData();
+  const totalEntries = Object.keys(data).length;
+  if (totalEntries === 0) return; // nothing to back up yet
+
+  const banner = document.getElementById('backupBanner');
+  const icon = document.getElementById('backupBannerIcon');
+  const title = document.getElementById('backupBannerTitle');
+  const sub = document.getElementById('backupBannerSub');
+
+  const days = daysSinceBackup();
+  const lastBackup = getLastBackupDate();
+
+  // Never backed up
+  if (days === null) {
+    banner.className = 'backup-banner warn show';
+    icon.textContent = '💾';
+    title.textContent = 'You haven\'t backed up yet!';
+    sub.textContent = `You have ${totalEntries} days of data — save a backup so you don't lose it.`;
+    return;
+  }
+
+  if (days >= DANGER_DAYS) {
+    banner.className = 'backup-banner danger show';
+    icon.textContent = '⚠️';
+    title.textContent = `No backup in ${days} days!`;
+    sub.textContent = `Last backup: ${lastBackup.toLocaleDateString('en-CA', {month:'short', day:'numeric'})}. Your data is at risk.`;
+    return;
+  }
+
+  if (days >= WARN_DAYS) {
+    banner.className = 'backup-banner warn show';
+    icon.textContent = '💾';
+    title.textContent = `Backup reminder — ${days} days ago`;
+    sub.textContent = `Last backup: ${lastBackup.toLocaleDateString('en-CA', {month:'short', day:'numeric'})}. Tap to save a fresh copy.`;
+    return;
+  }
+
+  // Recent backup — hide banner
+  banner.className = 'backup-banner';
+}
+
+function quickBackupFromBanner() {
+  exportJSON();
+  recordBackup();
+  // Hide banner after backup
+  setTimeout(() => {
+    document.getElementById('backupBanner').className = 'backup-banner';
+    showToast('Backup saved! ✅ See you in 7 days 😄');
+  }, 600);
+}
+
+// Also record backup when the manual backup button is used from Data tab
+const _origExportJSON = exportJSON;
+function exportJSON() {
+  _origExportJSON();
+  recordBackup();
+  // Refresh reminder state after backing up
+  setTimeout(checkBackupReminder, 300);
+}
 
 </script>
 </body>
